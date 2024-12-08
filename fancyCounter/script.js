@@ -1,5 +1,3 @@
-// addEventListener('click')
-
 const increaseButtonL = document.querySelector('.counter__button--increase');
 const decreaseButtonL = document.querySelector('.counter__button--decrease');
 const refreshButtonL = document.querySelector('.counter__reset-button')
@@ -13,7 +11,7 @@ document.addEventListener('keydown', incrementCounter)
 
 decreaseButtonL.addEventListener('click', decrementCounter);
 
-refreshButtonL.addEventListener('click', function(){
+refreshButtonL.addEventListener('click', () => {
     counterValueEL.textContent = 0;
     increaseButtonL.disabled = false;
     decreaseButtonL.disabled = false;
@@ -24,7 +22,7 @@ refreshButtonL.addEventListener('click', function(){
 })
 
 
-function incrementCounter(){
+const incrementCounter = () => {
     //get current value
     const currentValue = counterValueEL.textContent;
     
@@ -48,7 +46,7 @@ function incrementCounter(){
 
 }
 
-function decrementCounter(){
+const decrementCounter = () => {
     const currentValue = counterValueEL.textContent;
     const currentValueAsNumber = +currentValue;
 
